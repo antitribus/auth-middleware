@@ -1,7 +1,6 @@
 # Auth Middleware
 
-#### Middleware em PHP desenvolvido para se comunicar com a Auth API e realizar
-validações dos resources retornados pelo Token JWT
+#### Middleware em PHP desenvolvido para se comunicar com a Auth API e realizar validações dos resources retornados pelo Token JWT
 
 ### Create config
 

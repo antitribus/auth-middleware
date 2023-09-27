@@ -1,0 +1,19 @@
+{
+    "name": "antit/auth-api",
+    "description": "Middleware para verificação da autenticação",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Antit\\AuthApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Raphael Barros",
+            "email": "raphael.barros@oliveiratrust.com.br"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "^6.8"
+    }
+}

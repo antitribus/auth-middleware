@@ -1,0 +1,31 @@
+<?php
+
+$short_options = "a:s:r:";
+$long_options = ["algorithm:", "secretKey:", "resource:"];
+$options = getopt($short_options, $long_options);
+
+$algorithm = 'HS256';
+$secretKey = '';
+$resource = 'change-me.com';
+
+if(isset($options["a"]) || isset($options["algorithm"])) {
+    $algorithm = isset($options["a"]) ? $options["a"] : $options["algorithm"];
+}
+
+if(isset($options["s"]) || isset($options["secretKey"])) {
+    $secretKey = isset($options["s"]) ? $options["s"] : $options["secretKey"];
+}
+
+if(isset($options["r"]) || isset($options["resource"])) {
+    $resource = isset($options["r"]) ? $options["r"] : $options["resource"];
+}
+
+
+$config = [
+    'alg' => $algorithm,
+    'secretKey' => $secretKey,
+    'resource' => $resource,
+];
+
+// Escreve arquivo de configuração na raiz da pasta
+file_put_contents('auth-api.config', json_encode($config, JSON_PRETTY_PRINT));

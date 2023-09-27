@@ -2,4 +2,3 @@
 .vscode
 vendor
 auth-api.config
-composer.lock

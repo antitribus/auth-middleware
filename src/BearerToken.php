@@ -1,6 +1,6 @@
 <?php
 
-namespace AuthApi;
+namespace Antitribus\Auth;
 
 use Exception;
 use DateTimeImmutable;

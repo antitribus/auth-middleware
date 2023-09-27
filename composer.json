@@ -1,16 +1,25 @@
 {
-    "name": "antit/auth-api",
-    "description": "Middleware para verificação da autenticação",
+    "name": "antitribus/auth-middleware",
+    "description": "Middleware para verificação da autenticação na Auth API",
     "type": "library",
+    "homepage": "https://github.com/antitribus/auth-middleware",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/antitribus/auth-middleware"
+        }
+    ],
+    "require-all": true,
     "autoload": {
         "psr-4": {
-            "Antit\\AuthApi\\": "src/"
+            "Antitribus\\Auth\\": "src/"
         }
     },
     "authors": [
         {
             "name": "Raphael Barros",
-            "email": "raphael.barros@oliveiratrust.com.br"
+            "email": "antitribus@gmail.com",
+            "homepage": "https://github.com/antitribus"
         }
     ],
     "require": {

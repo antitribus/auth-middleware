@@ -1,11 +1,11 @@
 <?php
 
-namespace AuthApi\Middlewares;
+namespace Antitribus\Auth\Middlewares;
 
-use AuthApi\BearerToken;
+use Antitribus\Auth\BearerToken;
 use Exception;
 
-class VerifyResourcesMiddleware
+class ResourcesMiddleware
 {
     public function __invoke()
     {
@@ -30,7 +30,7 @@ class VerifyResourcesMiddleware
                     return true;
                 }
             }
-            
+
             throw new Exception('HTTP/1.1 401 Unauthorized');
         } catch (Exception $e) {
             header($e->getMessage());

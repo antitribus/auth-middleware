@@ -1,19 +1,19 @@
 <?php
 
 $short_options = "a:s:r:";
-$long_options = ["algorithm:", "secretKey:", "resource:"];
+$long_options = ["algorithm:", "secret_key:", "resource:"];
 $options = getopt($short_options, $long_options);
 
 $algorithm = 'HS256';
-$secretKey = '';
-$resource = 'change-me.com';
+$secretKey = hash('sha256', bin2hex(random_bytes(18)));
+$resource = '';
 
 if(isset($options["a"]) || isset($options["algorithm"])) {
     $algorithm = isset($options["a"]) ? $options["a"] : $options["algorithm"];
 }
 
-if(isset($options["s"]) || isset($options["secretKey"])) {
-    $secretKey = isset($options["s"]) ? $options["s"] : $options["secretKey"];
+if(isset($options["s"]) || isset($options["secret_key"])) {
+    $secretKey = isset($options["s"]) ? $options["s"] : $options["secret_key"];
 }
 
 if(isset($options["r"]) || isset($options["resource"])) {

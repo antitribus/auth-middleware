@@ -12,7 +12,8 @@
                 "source": {
                     "type": "vcs",
                     "url": "https://github.com/antitribus/auth-middleware",
-                    "reference": "master"
+                    "reference": "master",
+                    "no-api": true
                 }
             }
         }

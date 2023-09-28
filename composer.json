@@ -3,21 +3,6 @@
     "description": "Middleware para verificação da autenticação na Auth API",
     "type": "library",
     "homepage": "https://github.com/antitribus/auth-middleware",
-    "repositories": {
-        "auth-middleware": {
-            "type": "package",
-            "package": {
-                "name": "antitribus/auth-middleware",
-                "version": "1.0",
-                "source": {
-                    "type": "vcs",
-                    "url": "https://github.com/antitribus/auth-middleware",
-                    "reference": "master",
-                    "no-api": true
-                }
-            }
-        }
-    },
     "autoload": {
         "psr-4": {
             "Antitribus\\Auth\\": "src/"
@@ -31,7 +16,6 @@
         }
     ],
     "require": {
-        "antitribus/auth-middleware": "^1",
         "firebase/php-jwt": "^6.8"
     }
 }
